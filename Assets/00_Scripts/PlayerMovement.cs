@@ -16,14 +16,27 @@ public class PlayerMovement : MonoBehaviour
     
     private CharacterController _controller;
     private Animator _animator;
+    private P_Finder Finder;
+    
     private void Start()
     {
         _controller = GetComponent<CharacterController>();
         _animator = GetComponent<Animator>();
+        Finder = GetComponent<P_Finder>();
     }
 
     private void Update()
     {
+        if (Finder.OnInteraction)
+        {
+            if (Input.anyKeyDown)
+            {
+                Delegate_Holder.OnOutInteraction();
+            }
+
+            return;
+        }
+        
         Move();
         RotateTowardsMouse();
     }

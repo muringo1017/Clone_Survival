@@ -1,16 +1,21 @@
+using System;
 using UnityEngine;
 
 public class Canvas_Holder : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+   [SerializeField] private GameObject Board;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   private void Start()
+   {
+      Delegate_Holder.OnInteraction += GetBoard;
+      Delegate_Holder.OnInteractionOut += BoardOut;
+   }
+
+   public void GetBoard()
+   {
+      Board.SetActive(true);
+   }
+   
+   public void BoardOut() => Board.GetComponent<UI_Animation_Handler>().AnimationChange("Out");
+   
 }
