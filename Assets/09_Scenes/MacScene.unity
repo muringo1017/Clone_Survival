@@ -1722,6 +1722,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543450653699131364}
   - component: {fileID: 919132149154618720}
+  - component: {fileID: 919132149154618723}
   - component: {fileID: 919132149154618722}
   - component: {fileID: 919132149154618719}
   - component: {fileID: 919132149154618721}
@@ -1764,7 +1765,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132149154618718}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55404ebff966fbe40bd85aae347c1861, type: 3}
   m_Name: 
@@ -1816,6 +1817,23 @@ MonoBehaviour:
   IconPrefab: {fileID: 7275096356433335399, guid: f3469d92e0ed5bd4ebc4a7b9ab9d808b, type: 3}
   activationDistance: 3
   OnInteraction: 0
+--- !u!114 &919132149154618723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149154618718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 710e7f795423d437cb40cfde8cd94ba6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  rotateSpeed: 10
 --- !u!4 &1031632034269183417
 Transform:
   m_ObjectHideFlags: 0
