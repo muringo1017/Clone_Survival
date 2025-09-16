@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement instance = null;
     [Header("Movement Settings")] 
     public float moveSpeed = 5.0f;
     //public float gravity = -9.81f;
@@ -17,12 +18,22 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController _controller;
     private Animator _animator;
     private P_Finder Finder;
-    
+    private void Awake()
+    {
+        if (instance == null) instance = this;
+    }
+
+    public void AnimatorChange(string temp)
+    {
+        _animator.SetTrigger(temp);
+    }
     private void Start()
     {
         _controller = GetComponent<CharacterController>();
         _animator = GetComponent<Animator>();
         Finder = GetComponent<P_Finder>();
+        Delegate_Holder.OnInteraction += () => _animator.SetBool("NonInteraction", true);
+        Delegate_Holder.OnInteractionOut += () => _animator.SetBool("NonInteraction", false);
     }
 
     private void Update()

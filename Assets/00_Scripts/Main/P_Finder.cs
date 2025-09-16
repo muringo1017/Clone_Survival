@@ -71,6 +71,7 @@ public class P_Finder : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.F))
             {
+                closetObject.GetComponent<M_Object>().Interaction();
                 Delegate_Holder.OnStartInteraction();
                 
             }

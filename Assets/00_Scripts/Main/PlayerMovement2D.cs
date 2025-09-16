@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerMovement2D : MonoBehaviour
 {
+
     [Header("Movement Settings")] 
     public float moveSpeed = 5.0f;
     //public float gravity = -9.81f;
@@ -17,8 +18,9 @@ public class PlayerMovement2D : MonoBehaviour
     private CharacterController _controller;
     private Animator _animator;
     private P_Finder Finder;
+
     
-    
+
     private void Start()
     {
         _controller = GetComponent<CharacterController>();
