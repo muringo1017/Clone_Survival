@@ -31,7 +31,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: mixamo.com
+      name: Tree
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
@@ -55,7 +55,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.31525266
+      - time: 0.19962516
         functionName: Hit
         data: 
         objectReferenceParameter: {instanceID: 0}

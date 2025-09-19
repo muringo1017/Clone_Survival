@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ae0a512fd0ac84ca34185c18d09069, type: 3}
   m_Name: Object_Scriptable
   m_EditorClassIdentifier: 
-  m_Name: 
-  HP: 0
+  m_Type: 0
+  Name: Tree
+  HP: 100
